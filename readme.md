@@ -2,7 +2,7 @@
 
 ### Demo
 
-http://demo.hazzardweb.com/laravel-comments
+http://laravel-comments.demo.hazzardweb.com
 
 ### Documentation
 

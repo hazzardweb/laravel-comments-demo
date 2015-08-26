@@ -23,7 +23,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Hazzard\\Comments\\": "../laravel-comments/src/"
+            "Hazzard\\Comments\\": "app/comments/src/"
         }
     },
     "autoload-dev": {
