@@ -144,6 +144,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Marwelln\Recaptcha\RecaptchaServiceProvider::class,
+        Hazzard\Comments\CommentsServiceProvider::class,
+
     ],
 
     /*

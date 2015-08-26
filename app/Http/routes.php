@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('comments');
+});
+
+Route::get('basic', function () {
+    return view('comments-basic');
 });
 
 // Authentication routes...

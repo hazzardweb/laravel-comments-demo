@@ -2,15 +2,18 @@
 
 namespace App;
 
+use Hazzard\Comments\Author\Author;
+use Hazzard\Comments\Author\AuthorContract;
+
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract, AuthorContract
 {
-    use Authenticatable, CanResetPassword;
+    use Authenticatable, CanResetPassword, Author;
 
     /**
      * The database table used by the model.
@@ -32,4 +35,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    /**
+     * The attributes that should be casted to native types.
+     *
+     * @var array
+     */
+    protected $casts = ['id' => 'integer'];
 }
