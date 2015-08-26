@@ -1,13 +1,9 @@
+.env
 /vendor
 /comments
 /node_modules
 /public/vendor
 Homestead.yaml
 Homestead.json
-.env
-
-resources/views/vendor/recaptcha/display.blade.php
-database/migrations/2015_08_11_*
-
-config/recaptcha.php
 composer.lock
+database/migrations/2015_08_11_*
