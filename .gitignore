@@ -9,3 +9,8 @@ composer.lock
 database/migrations/2015_08_11_*
 .htaccess
 /app/comments
+/config/comments.php
+/config/smilies.php
+/config/recaptcha.php
+/resources/views/vendor/recaptcha/
+/public/smilies
