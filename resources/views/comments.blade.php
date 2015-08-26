@@ -30,6 +30,8 @@
             </div>
             <div class="clearfix"></div>
 
+            @include('help')
+
             <!-- Display comments. -->
             @include('comments::display', ['pageId' => 'page1'])
         </div>
