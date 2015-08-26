@@ -48,6 +48,17 @@
             </form>
 
             <p>Don't have an account? <a href="/auth/register">Register</a></p>
+
+            <div class="alert alert-info" style="margin-bottom: 0">
+                <a href="#" onclick="loginAsAdmin()">Click <b>here</b> to log in as <b>admin</b>.</a>
+                <script>
+                    function loginAsAdmin() {
+                        document.getElementById('email').value = 'admin@example.com';
+                        document.getElementById('password').value = 'admin123';
+                        document.getElementsByTagName('form')[0].submit();
+                    }
+                </script>
+            </div>
         </div>
     </div>
 </body>
