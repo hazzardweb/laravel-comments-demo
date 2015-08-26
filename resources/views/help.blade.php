@@ -3,6 +3,8 @@
     <li><a href="#" data-toggle="modal" data-target="#smilies-modal">Emoticons Codes</a></li>
 </ul>
 
+Markdown and Live comments are not enabled for this demo.
+
 <div class="modal fade" id="bbcode-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
