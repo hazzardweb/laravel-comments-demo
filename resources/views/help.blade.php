@@ -1,6 +1,6 @@
 <ul class="help">
     <li><a href="#" data-toggle="modal" data-target="#bbcode-modal">BBCode Tags</a></li>
-    <li><a href="#" data-toggle="modal" data-target="#smilies-modal">Emoticons Codes</a></li>
+    <li><a href="#" data-toggle="modal" data-target="#emoji-modal">Emoji Codes</a></li>
 </ul>
 
 Markdown and Live comments are not enabled for this demo.
@@ -64,29 +64,19 @@ Markdown and Live comments are not enabled for this demo.
     </div>
 </div>
 
-<div class="modal fade" id="smilies-modal" tabindex="-1" role="dialog">
+<div class="modal fade" id="emoji-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
-                <h4 class="modal-title">Emoticons Codes</h4>
+                <h4 class="modal-title">Emoji Codes</h4>
             </div>
             <div class="modal-body">
                 <table class="table">
-                    <?php
-                    app('comments');
-                    $smilies = app('comments.formatter')->getSmilies();
-                    $images = $smilies->getSmilies();
-                    $i = 1;
-                    ?>
-                    @foreach ($images as $smiley => $image)
-                    <?php $i++; if ($i % 2) continue; ?>
+                    @foreach(config('emoji', []) as $code => $entity)
                         <tr>
-                            <td>{!! $smilies->getImage($smiley) !!}</td>
-                            <td>{{ $smiley }}</td>
-                            <?php $smiley = array_search(next($images), $images); ?>
-                            <td>{!! $smilies->getImage($smiley) !!}</td>
-                            <td>{{ $smiley }}</td>
+                            <td>{{ $code }}</td>
+                            <td>{!! $entity !!}</td>
                         </tr>
                     @endforeach
                 </table>
@@ -94,6 +84,12 @@ Markdown and Live comments are not enabled for this demo.
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(e) {
+        console.log(twemoji.parse(document.getElementById('emoji-modal'), {size: 16}));
+    });
+</script>
 
 <style>
     .help {
