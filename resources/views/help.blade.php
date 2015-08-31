@@ -1,9 +1,10 @@
 <ul class="help">
-    <li><a href="#" data-toggle="modal" data-target="#bbcode-modal">BBCode Tags</a></li>
-    <li><a href="#" data-toggle="modal" data-target="#emoji-modal">Emoji Codes</a></li>
+    <li>You can use <a href="#" data-toggle="modal" data-target="#bbcode-modal">BBCodes</a> and <a href="#" data-toggle="modal" data-target="#emoji-modal">Emoticons</a>.</li>
+    <li>URLs will be conveted into clickable links.</li>
+    <li>Image URLs will be conveted into actual images.</li>
+    <li>URLs from YouTube, Facebook, Twitter, <a href="http://s9etextformatter.readthedocs.org/Plugins/MediaEmbed/Sites/" target="_blank">etc.</a> will be embedded.</li>
+    <li>Markdown and live comments are not enabled for this demo.</li>
 </ul>
-
-Markdown and Live comments are not enabled for this demo.
 
 <div class="modal fade" id="bbcode-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -34,15 +35,17 @@ Markdown and Live comments are not enabled for this demo.
                             <td><u>underlined text</u></td>
                         </tr>
                         <tr>
-                            <td><span>[url]</span>http://example.org<span>[/url]</span></td>
+                            <td>
+                                <del><span>[url]</span>http://example.org<span>[/url]</span></del><br>
+                                Auto link already enabled.
+                            </td>
                             <td><a href="http://example.org">http://example.org</a></td>
                         </tr>
                         <tr>
-                            <td><span>[url=http://example.com]</span>Example<span>[/url]</span></td>
-                            <td><a href="http://example.com">Example</a></td>
-                        </tr>
-                        <tr>
-                            <td><span>[img]</span>http://i.imgur.com/5hueFdG.png<span>[/img]</span></td>
+                            <td>
+                                <del><span>[img]</span>http://i.imgur.com/5hueFdG.png<span>[/img]</span></del><br>
+                                Auto image already enabled.
+                            </td>
                             <td><img src="http://i.imgur.com/5hueFdG.png"></td>
                         </tr>
                         <tr>
@@ -52,6 +55,20 @@ Markdown and Live comments are not enabled for this demo.
                         <tr>
                             <td><span>[quote]</span>quoted text<span>[/quote]</span></td>
                             <td><blockquote>quoted text</blockquote></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>[list]</span><br>
+                                [*]Entry 1 <br>
+                                [*]Entry 2 <br>
+                                <span>[/list]</span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Entry 1</li>
+                                    <li>Entry 2</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td><span>[youtube]</span>N8ZAx_OvKpM<span>[/youtube]</span></td>
@@ -69,17 +86,49 @@ Markdown and Live comments are not enabled for this demo.
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
-                <h4 class="modal-title">Emoji Codes</h4>
+                <h4 class="modal-title">Emoticons</h4>
             </div>
             <div class="modal-body">
                 <table class="table">
-                    @foreach(config('emoji', []) as $code => $entity)
-                        <tr>
-                            <td>{{ $code }}</td>
-                            <td>{!! $entity !!}</td>
-                        </tr>
-                    @endforeach
+                    <tr>
+                        <td>:)</td>
+                        <td>&#x1f604;</td>
+                        <td>:D</td>
+                        <td>&#x1f603;</td>
+                    </tr>
+                    <tr>
+                        <td>:P</td>
+                        <td>&#x1f61c;</td>
+                        <td>:(</td>
+                        <td>&#x1f61f;</td>
+                    </tr>
+                    <tr>
+                        <td>:|</td>
+                        <td>&#x1f610;</td>
+                        <td>;)</td>
+                        <td>&#x1f609;</td>
+                    </tr>
+                    <tr>
+                        <td>:*</td>
+                        <td>&#x1f618;</td>
+                        <td>:&#039;(</td>
+                        <td>&#x1f622;</td>
+                    </tr>
+                    <tr>
+                        <td>:&#039;)</td>
+                        <td>&#x1f602;</td>
+                        <td>:O</td>
+                        <td>&#x1f62e;</td>
+                    </tr>
+                    <tr>
+                        <td>B)</td>
+                        <td>&#x1f60e;</td>
+                        <td>&gt;:(</td>
+                        <td>&#x1f621;</td>
+                    </tr>
                 </table>
+
+                <p>Or <a href="http://getemoji.com/" target="_blank">copy and paste</a> Emoji Unicode characters.</p>
             </div>
         </div>
     </div>
@@ -87,21 +136,24 @@ Markdown and Live comments are not enabled for this demo.
 
 <script>
     document.addEventListener('DOMContentLoaded', function(e) {
-        console.log(twemoji.parse(document.getElementById('emoji-modal'), {size: 16}));
+        twemoji.parse(document.getElementById('emoji-modal'), {size: 36});
     });
 </script>
 
 <style>
     .help {
         margin-top: 20px;
-        padding-left: 0px;
-        list-style-type: none;
+        padding-left: 20px;
+        list-style-type: circle;
     }
-    .help img {
-        vertical-align: top;
+    .emoji {
+        width: 20px;
     }
     .bbcodes td span:not(.token) {
         color: #008000;
         font-weight: bold;
+    }
+    .bbcodes blockquote {
+        margin-bottom: 0px;
     }
 </style>

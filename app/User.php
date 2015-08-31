@@ -2,18 +2,15 @@
 
 namespace App;
 
-use Hazzard\Comments\Author\Author;
-use Hazzard\Comments\Author\AuthorContract;
-
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract, AuthorContract
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
-    use Authenticatable, CanResetPassword, Author;
+    use Authenticatable, CanResetPassword;
 
     /**
      * The database table used by the model.
@@ -42,4 +39,22 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $casts = ['id' => 'integer'];
+
+
+    /**
+     * Return the author user attributes.
+     *
+     * @return array
+     */
+    public function getAuthor()
+    {
+        return [
+            'id'     => $this->id,
+            'name'   => $this->name,
+            'email'  => $this->email,
+            'url'    => $this->url,
+            'avatar' => 'gravatar',
+            'admin'  => $this->role === 'admin',
+        ];
+    }
 }
