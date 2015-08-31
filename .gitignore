@@ -5,7 +5,6 @@
 /public/vendor
 Homestead.yaml
 Homestead.json
-composer.lock
 database/migrations/2015_08_11_*
 .htaccess
 /app/comments
