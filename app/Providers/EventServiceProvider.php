@@ -16,6 +16,10 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\SomeEvent' => [
             'App\Listeners\EventListener',
         ],
+
+        'Hazzard\Comments\Events\FormatterConfigurator' => [
+            'App\Listeners\ConfigureFormatter',
+        ],
     ];
 
     /**
