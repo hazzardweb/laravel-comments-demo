@@ -15,7 +15,7 @@
     @include('comments::navbar')
 
     <div class="container">
-        <div id="demo" class="col-md-9 col-md-offset-2">
+        <div id="demo" class="col-md-10 col-md-offset-1">
             <div class="pull-left">
                 <a href="{{ route('comments.admin.index') }}" class="btn btn-default btn-sm">Admin Dashboard</a>
             </div>
@@ -45,7 +45,7 @@
     <script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.min.js"></script>
 
     <script src="/vendor/comments/js/utils.js"></script>
-    <script src="/vendor/comments/js/comments.js"></script>
+    <script src="/vendor/comments/js/comments.min.js"></script>
 
     <!-- Initialize -->
     <script>

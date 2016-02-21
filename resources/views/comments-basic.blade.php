@@ -40,7 +40,7 @@
     <script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.min.js"></script>
 
     <script src="/vendor/comments/js/utils.js"></script>
-    <script src="/vendor/comments/js/comments.js"></script>
+    <script src="/vendor/comments/js/comments.min.js"></script>
 
     <!-- Initialize -->
     <script>
