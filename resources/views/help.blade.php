@@ -135,7 +135,7 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function(e) {
+    document.addEventListener('DOMContentLoaded', function (e) {
         twemoji.parse(document.getElementById('emoji-modal'), {size: 36});
     });
 </script>

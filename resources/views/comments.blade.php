@@ -21,13 +21,13 @@
             </div>
 
             <div class="pull-right">
-                <?php if (Auth::check()) { ?>
-                    <b><?php echo Auth::user()->name; ?></b> |
+                @if (Auth::check())
+                    <b>{{ Auth::user()->name }}</b> |
                     <a href="/auth/logout">Logout</a>
-                <?php } else { ?>
+                @else
                     <a href="/auth/login" class="btn btn-success btn-sm">Login</a>
                     <a href="/auth/register" class="btn btn-success btn-sm">Register</a>
-                <?php } ?>
+                @endif
             </div>
             <div class="clearfix"></div>
 
@@ -40,9 +40,18 @@
         @include('comments::legal')
     </div>
 
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="/vendor/comments/js/prism.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.min.js"></script>
+
+    <script src="/vendor/comments/js/utils.js"></script>
     <script src="/vendor/comments/js/comments.js"></script>
+
+    <!-- Initialize -->
+    <script>
+        // Vue.config.debug = true;
+
+        new Vue({el: '#comments'});
+    </script>
 </body>
 </html>
