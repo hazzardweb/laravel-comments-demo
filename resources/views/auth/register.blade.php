@@ -12,7 +12,7 @@
     @include('comments::navbar')
 
     <div id="auth" class="container">
-        <div id="demo" class="col-md-9 col-md-offset-2">
+        <div id="demo" class="col-md-10 col-md-offset-1">
             <h3>Register</h3>
 
             @if (count($errors) > 0)
