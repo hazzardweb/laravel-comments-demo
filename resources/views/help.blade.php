@@ -49,7 +49,7 @@
                             <td><img src="http://i.imgur.com/5hueFdG.png"></td>
                         </tr>
                         <tr>
-                            <td><span>[code=php]</span>&lt;?php echo 'Hello!'; ?&gt;<span>[/php]</span></td>
+                            <td><span>[code=php]</span>&lt;?php echo 'Hello!'; ?&gt;<span>[/code]</span></td>
                             <td><pre><code class="language-php">&lt;?php echo 'Hello!'; ?&gt;</code></pre></td>
                         </tr>
                         <tr>
