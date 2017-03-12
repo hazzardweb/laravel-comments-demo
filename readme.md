@@ -1,11 +1,13 @@
-# Ajax Comment System for Laravel™
+# Laravel Comments Demo
 
 ### Demo
 
-http://acs-laravel.demo.hazzardweb.com
+https://laravel-comments.demo.hazzardweb.com
 
 ### Documentation
 
-http://docs.hazzardweb.com/ajax-comment-system-laravel
+http://docs.hazzardweb.com/laravel-comments
 
-> The repository does not include the [Ajax Comment System for Laravel](http://codecanyon.net/user/hazzardweb/portfolio) source files.
+### Download
+
+https://codecanyon.net/item/ajax-comment-system-for-laravel/12660889

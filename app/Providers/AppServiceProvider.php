@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // http://stackoverflow.com/a/31228951/860041
+        // if (\DB::connection() instanceof \Illuminate\Database\SQLiteConnection) {
+        //     \DB::unprepared('PRAGMA foreign_keys=1');
+        // }
     }
 
     /**
