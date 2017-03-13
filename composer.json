@@ -1,4 +1,10 @@
 {
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./laravel-comments"
+        }
+    ],
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
@@ -6,6 +12,7 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "hazzard/laravel-comments": "@dev",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "predis/predis": "^1.1",

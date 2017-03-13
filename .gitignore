@@ -10,3 +10,4 @@ Homestead.yaml
 composer.lock
 laravel-echo-server.json
 /public/vendor
+/laravel-comments

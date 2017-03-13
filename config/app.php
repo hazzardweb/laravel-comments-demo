@@ -167,7 +167,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
-        // Hazzard\Comments\CommentsServiceProvider::class,
+        Hazzard\Comments\CommentsServiceProvider::class,
 
         /*
          * Application Service Providers...
