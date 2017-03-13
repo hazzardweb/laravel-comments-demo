@@ -1,4 +1,4 @@
-# Laravel Comments Demo
+# Laravel Comments Demo 2.0
 
 ### Demo
 
