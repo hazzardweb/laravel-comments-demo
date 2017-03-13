@@ -13,6 +13,30 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <style>
+        .help {
+            margin-top: 20px;
+            padding-left: 20px;
+            padding-left: 25px;
+            list-style-type: circle;
+        }
+        .emoji {
+            width: 20px;
+        }
+        .bbcodes td span:not(.token) {
+            color: #008000;
+            font-weight: bold;
+        }
+        .bbcodes blockquote {
+            margin-bottom: 0px;
+        }
+
+        .emoji {
+          width: 18px;
+          margin-top: -5px;
+        }
+    </style>
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
