@@ -54,9 +54,9 @@
                                     Login
                                 </button>
 
-                                <a class="btn btn-link" href="#" onclick="loginAsAdmin()">
+                                {{-- <a class="btn btn-link" href="#" onclick="loginAsAdmin()">
                                     Login As Admin
-                                </a>
+                                </a> --}}
 
                                 {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
@@ -72,11 +72,11 @@
 @endsection
 
 @push('scripts.footer')
-<script>
+{{-- <script>
     function loginAsAdmin() {
-        document.getElementById('email').value = 'admin@comments.app';
+        document.getElementById('email').value = 'demo@example.com';
         document.getElementById('password').value = 'secret';
         document.getElementsByTagName('form')[0].submit();
     }
-</script>
+</script> --}}
 @endpush
