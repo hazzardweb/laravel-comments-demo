@@ -45,7 +45,7 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="nav navbar-nav">
                             <li><a href="https://codecanyon.net/item/ajax-comment-system-for-laravel/12660889" target="_blank">Download</a></li>
-                            <li><a href="http://docs.hazzardweb.com/ajax-comment-system-laravel" target="_blank">Documentation</a></li>
+                            <li><a href="http://docs.hazzardweb.com/laravel-comments" target="_blank">Documentation</a></li>
                             {{-- <li><a href="https://hazzardweb.com" target="_blank">HazzardWeb</a></li> --}}
                         </ul>
 
