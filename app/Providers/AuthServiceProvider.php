@@ -32,7 +32,7 @@ class AuthServiceProvider extends ServiceProvider
          * @return bool
          */
         Gate::define('moderate-comments', function ($user) {
-            return $user->email === 'demo@example.com';
+            return $user->email === 'demo@example.com' || $user->email === 'me@cretueusebiu.com';
         });
     }
 }
