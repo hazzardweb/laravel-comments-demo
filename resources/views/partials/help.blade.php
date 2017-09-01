@@ -43,10 +43,10 @@
                         </tr>
                         <tr>
                             <td>
-                                <del><span>[img]</span>http://i.imgur.com/5hueFdG.png<span>[/img]</span></del><br>
+                                <del><span>[img]</span>https://i.imgur.com/5hueFdG.png<span>[/img]</span></del><br>
                                 Auto image already enabled.
                             </td>
-                            <td><img src="http://i.imgur.com/5hueFdG.png"></td>
+                            <td><img src="https://i.imgur.com/5hueFdG.png"></td>
                         </tr>
                         <tr>
                             <td><span>[code=php]</span>&lt;?php echo 'Hello!'; ?&gt;<span>[/code]</span></td>
