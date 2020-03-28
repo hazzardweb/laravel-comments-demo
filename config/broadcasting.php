@@ -38,6 +38,7 @@ return [
             'options' => [
                 'cluster' => env('PUSHER_APP_CLUSTER'),
                 'encrypted' => true,
+                'useTLS' => true,
             ],
         ],
 
