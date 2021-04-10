@@ -1,6 +1,5 @@
-
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 
 // Variables
 @import "variables";
@@ -25,4 +24,30 @@
 .panel {
     border: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+}
+
+.info-list {
+    padding-left: 25px;
+    list-style-type: circle;
+}
+
+#bbcode-modal {
+    td span:not(.token) {
+        color: $brand-success;
+        font-weight: bold;
+    }
+
+    blockquote {
+        margin-bottom: 0px;
+    }
+}
+
+#emoji-modal {
+    .emoji {
+        width: 32px;
+    }
+
+    td {
+        vertical-align: middle;
+    }
 }

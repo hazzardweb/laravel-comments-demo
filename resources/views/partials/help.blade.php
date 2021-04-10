@@ -1,4 +1,4 @@
-<ul class="help">
+<ul class="info-list">
     <li>You can use <a href="#" data-toggle="modal" data-target="#bbcode-modal">BBCodes</a> and <a href="#" data-toggle="modal" data-target="#emoji-modal">Emoticons</a>.</li>
     <li>URLs will be conveted into clickable links.</li>
     <li>Image URLs will be conveted into actual images.</li>
@@ -14,7 +14,7 @@
                 <h4 class="modal-title">BBCode Tags</h4>
             </div>
             <div class="modal-body">
-                <table class="table bbcodes">
+                <table class="table">
                     <thead>
                         <tr>
                             <th>BBCode</th>

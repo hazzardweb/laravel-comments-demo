@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -12,37 +12,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <style>
-        .help {
-            margin-top: 20px;
-            padding-left: 20px;
-            padding-left: 25px;
-            list-style-type: circle;
-        }
-        .emoji {
-            width: 20px;
-        }
-        .bbcodes td span:not(.token) {
-            color: #008000;
-            font-weight: bold;
-        }
-        .bbcodes blockquote {
-            margin-bottom: 0px;
-        }
-
-        .emoji {
-          width: 18px;
-          margin-top: -5px;
-        }
-    </style>
-
-    <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
 </head>
 <body>
     <div id="app">

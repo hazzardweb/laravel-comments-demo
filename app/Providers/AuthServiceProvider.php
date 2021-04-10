@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
+        // 'App\Models\Model' => 'App\Policies\ModelPolicy',
     ];
 
     /**
@@ -28,7 +28,7 @@ class AuthServiceProvider extends ServiceProvider
         /**
          * Determine if the current user can access the admin panel.
          *
-         * @param  User $user
+         * @param  \App\Models\User $user
          * @return bool
          */
         Gate::define('moderate-comments', function ($user) {
