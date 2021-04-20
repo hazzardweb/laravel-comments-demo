@@ -1,0 +1,53 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.navbar-default {
+    border-top: 4px solid #f56857;
+    border-bottom: 1px solid #E2E2E2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand img {
+  top: -2px;
+  width: 28px;
+  margin-right: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.panel {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+}
+
+.info-list {
+    padding-left: 25px;
+    list-style-type: circle;
+}
+
+#bbcode-modal {
+    td span:not(.token) {
+        color: $brand-success;
+        font-weight: bold;
+    }
+
+    blockquote {
+        margin-bottom: 0px;
+    }
+}
+
+#emoji-modal {
+    .emoji {
+        width: 32px;
+    }
+
+    td {
+        vertical-align: middle;
+    }
+}
